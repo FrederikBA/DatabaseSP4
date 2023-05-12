@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from services import test_service
+from services import redis_service
 from models import dtos
 
 app = FastAPI()
@@ -20,6 +20,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 @app.get("/")
 def read_root():
-    return test_service.get_data()
+    return redis_service.get_data()

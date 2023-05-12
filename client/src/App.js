@@ -8,7 +8,6 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <Header />
       <Routes>
         <Route path="/" element={<One />} />
         <Route path="/two" element={<Two />} />
